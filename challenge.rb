@@ -1,3 +1,11 @@
 def pangram?(string)
-  # enter your code here
+  alphabet = ('a'..'z').to_a
+  string = string.downcase
+
+  alphabet.each do |letter|
+    unless string.include?(letter)
+      return false
+    end
+  end
+  return true
 end

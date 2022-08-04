@@ -1,3 +1,5 @@
+require_relative '../challenge'
+
 describe "Pangram" do
   it "Check if string is a Pangram" do
     # "The quick brown fox jumps over the lazy dog."
