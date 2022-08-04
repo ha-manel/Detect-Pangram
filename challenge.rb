@@ -1,11 +1,6 @@
-def pangram?(string)
-  alphabet = ('a'..'z').to_a
-  string = string.downcase
+require 'set'
 
-  alphabet.each do |letter|
-    unless string.include?(letter)
-      return false
-    end
-  end
-  return true
+def pangram?(string)
+  string = string.downcase.gsub(/[^a-z0-9\s]/i, '').delete(" \t\r\n").split('').to_set
+  return string.size() == 26
 end
